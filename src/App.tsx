@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import SeminarDetails from "./pages/SeminarDetails";
+import Seminars from "./pages/Seminars";
+import About from "./pages/About";
+import Mentorship from "./pages/Mentorship";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,8 +23,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/seminars" element={<Index />} />
+            <Route path="/seminars" element={<Seminars />} />
             <Route path="/seminars/:id" element={<SeminarDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/mentorship" element={<Mentorship />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
